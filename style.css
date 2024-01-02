@@ -14,27 +14,66 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('http://i.imgur.com/9kh3G8L.jpg') no-repeat center center fixed;
+    background: url('https://i.imgur.com/uzqR6Tp.jpg" title="source: imgur.com') no-repeat center center fixed;
     background-size: cover;
   }
   #profile-card {
     width: 480px;   
     max-width: calc(100vw - 10px);
     border-radius: 5px;
-    box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
+    box-shadow: hsla(0, 0%, 0%, .8) 5px 10px 20px;
     background-color: hsl(0, 0%, 100%, .25);
   }
-  img {
-    width: 120px;
-    height: 120px;
+  #animation-container {
+    width: 205px;
+    height: 205px;
     border-radius: 50%;
-    padding: 2px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(114, 113, 113);
+  }
+
+  #light-animation {
+    width: 6px;
+    height: 205px;
+    background-color: rgba(196, 194, 193, 0.884);
+    position: relative;
+    animation: moveContainer2 2s 2 2s cubic-bezier(.3,.45,.53,.66) alternate;
+    animation-fill-mode: both;
+  }
+
+  @keyframes moveContainer2 {
+    0% {
+      left: 206px;
+    }
+    100% {
+      left: -6px;
+    }
+  }
+
+  figure {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+  }
+
+  #profil-image {
+    margin-top: -60px;
+    padding: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     background-color: #666;
     transition: all .5s ease-in-out;
     filter: grayscale(50%);
   }
   img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     filter: grayscale(20%);
   }
   i {
@@ -63,10 +102,7 @@
     padding: 5% 10%;
     border-top: 1px solid hsla(0, 0%, 30%, .8);
   }
-  #profil-image {
-    margin-top: -60px;
-    padding: 5px;
-  }
+
   .about {
     margin-bottom: 10%;
   }
