@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('https://i.imgur.com/uzqR6Tp.jpg" title="source: imgur.com') no-repeat center center fixed;
+    background: url('https://i.imgur.com/uzqR6Tp.jpg') repeat center center fixed;
     background-size: cover;
   }
   #profile-card {
@@ -23,6 +23,7 @@
     border-radius: 5px;
     box-shadow: hsla(0, 0%, 0%, .8) 5px 10px 20px;
     background-color: hsl(0, 0%, 100%, .25);
+    overflow: auto !important;
   }
   #animation-container {
     width: 205px;
