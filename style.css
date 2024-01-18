@@ -1,42 +1,121 @@
+/* -----CSS Reset----- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* height: -webkit-fill-available; */
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+fieldset,
+legend,
+button,
+input,
+textarea,
+pre,
+blockquote,
+address,
+th,
+td,
+hr {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+}
+
+/* -----Main CSS----- */
+
+* {
     font-family: roboto, lucida-console, verdana, sans-serif, serif;
     letter-spacing: 1px;
     line-height: 1.3;
     font-weight: 700;
     color: rgba(38, 38, 38, .9);
   }
+
   body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('image/background-image.jpg') repeat center center fixed;
+    background-size: cover;
+  }
+
+  .container {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 100px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: url('https://i.imgur.com/uzqR6Tp.jpg') repeat center center fixed;
-    background-size: cover;
-  }
+}
+
   #profile-card {
     width: 480px;   
     max-width: calc(100vw - 10px);
+    min-height: 550px;
     border-radius: 5px;
     box-shadow: hsla(0, 0%, 0%, .8) 5px 10px 20px;
     background-color: hsl(0, 0%, 100%, .25);
-    overflow: auto !important;
   }
+
   #animation-container {
-    width: 205px;
-    height: 205px;
+    width: 206px;
+    height: 206px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    background-color: rgb(114, 113, 113);
   }
 
   #light-animation {
     width: 6px;
-    height: 205px;
+    height: 206px;
     background-color: rgba(196, 194, 193, 0.884);
     position: relative;
     animation: moveContainer2 2s 2 2s cubic-bezier(.3,.45,.53,.66) alternate;
@@ -65,37 +144,43 @@
     justify-content: center;
     align-items: center;
   }
+
   img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: #666;
     transition: all .5s ease-in-out;
-    filter: grayscale(50%);
   }
+
   img:hover {
     transform: scale(1.03);
-    filter: grayscale(20%);
   }
+
   i {
     transition: all .3s;
   }
+
   i:hover {
     transform: scale(1.2);
   }
+
   #head {
     text-align: center;
     width: 90%;
     margin: 0 auto;
     margin-bottom: 10%;
   }
+
   #name-headline {
     padding: 5px
   }
+
   #name-headline h1 {
     font-family: 'Rajdhani', sans-serif;
     font-size: 2rem;
   }
+
   #content {
     text-align: center;
     width: 90%;
@@ -107,13 +192,15 @@
   .about {
     margin-bottom: 10%;
   }
+
   h2 {
     margin-bottom: 5%;
   }
+
   ul {
-    list-style-type: none;
     padding: 5px;
   }
+
   li {
     display: inline;
     padding: 5px;
